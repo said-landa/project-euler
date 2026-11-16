@@ -4,9 +4,22 @@
 
 bool arePalin(int num){
     int reversedNum = num;
-    int *reversedNumArr = NULL;
+    size_t capacity = 2;
+    size_t stored = 0;
+    int *reversedNumArr[capacity];
 
     while reversedNum > 0:
+        if (stored == capacity) {
+            int temp = realloc();
+
+            if(!temp) { 
+                free(reversedNumArr); 
+                fprintf("Memory allocation error");
+                return NULL;
+            }
+        }
+
+        reversedNumArr[stored++] = reversedNum % 10;
         
 }
 

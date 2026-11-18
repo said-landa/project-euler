@@ -30,9 +30,11 @@ bool arePalin(int num){
     for(sizeof i = 0; i < stored; i++) {
         reversedNum = reversedNum * 10 + reversedNumArr[i];
     }
-    
-       
-    
+
+    if (reversedNum == num) {
+        return true;
+    }       
+    return false;
 }
 
 int main(void) {
@@ -40,7 +42,16 @@ int main(void) {
     int num2 = 998
     lim = 899
 
-
+    bool done = false;
+    
+    while (num1 > lim && !done) {
+        while (num2 > lim) {
+            int prod = num1 * num2;
+            if (arePalin(prod)) {
+                printf()
+            }
+        }
+    }
 
     return 0;
 }

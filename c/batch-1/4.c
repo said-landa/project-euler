@@ -32,11 +32,8 @@ bool arePalin(int num){
         reversedNum = reversedNum * 10 + reversedNumArr[i];
     }
 
-    if (reversedNum == num) {
-        free(reversedNumArr);
-        return true;
-    }       
-    return false;
+    free(reversedNumArr);
+    return reversedNum == num;
 }
 
 int main(void) {

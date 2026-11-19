@@ -29,4 +29,4 @@ while num1 > lim and not done:
     if (num1 == lim + 1):
         lim = lim - 100
     num1 -= 1  
-    num2 = num1 -1   
+    num2 = num1 - 1   

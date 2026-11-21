@@ -6,6 +6,7 @@ def arePalin(num):
     return str(num) == str(num)[::-1]
     
 prefixes = range(997, 99, -1)
+palindromes = (int(str(prefix) + str(prefix)[::-1]) for prefix in prefixes)
 done = False
 
 while num1 > lim and not done:

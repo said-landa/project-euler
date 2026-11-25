@@ -37,6 +37,10 @@ bool arePalin(int num){
 }
 
 int main(void) {
+    for (int prefix = 997; prefix >= 100; --prefix) {
+        
+    }
+
     int num1 = 999;
     int num2 = 998;
     int lim = 899;

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <math.h>
 
 bool arePalin(int num){
     int reversedNum = num;
@@ -38,7 +39,12 @@ bool arePalin(int num){
 
 int main(void) {
     for (int prefix = 997; prefix >= 100; --prefix) {
-        
+        int palindrome = prefix;
+
+        for (int digits = prefix; digits > 0; digits /= 10) { //Integer division by 10 drops the last digit each time. For 997, the loop runs with digits equal to 997, then 99, then 9.
+            palindrome = palindrome * 10  + digits % 10; //Multiplying by 10 makes room for one digit. digits % 10 takes the last digit, so the first pass turns 997 into 9977
+        }
+        int lowerBound = 
     }
 
     int num1 = 999;
